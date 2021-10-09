@@ -6,7 +6,7 @@
 /*   By: jwander <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 16:35:21 by jwander           #+#    #+#             */
-/*   Updated: 2021/10/08 17:07:13 by jwander          ###   ########.fr       */
+/*   Updated: 2021/10/09 17:27:17 by jwander          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_char(t_shirt *args)
 {
-	ft_putchar_fd(va_args(args->arg, int), 1);
+	ft_putchar_fd(va_arg(args->arg, int), 1);
 	args->counter++;
 }
 
@@ -23,7 +23,7 @@ void	ft_string(t_shirt *args)
 	int		len;
 	char	*str;
 
-	str = va_args(args->arg, char *);
+	str = va_arg(args->arg, char *);
 	if (str == NULL)
 	{
 		ft_putstr_fd("(null)", 1);

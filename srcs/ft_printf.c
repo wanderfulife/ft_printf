@@ -6,7 +6,7 @@
 /*   By: jwander <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 14:34:07 by jwander           #+#    #+#             */
-/*   Updated: 2021/10/08 16:11:13 by jwander          ###   ########.fr       */
+/*   Updated: 2021/10/09 17:29:10 by jwander          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	getflag(const char c, t_shirt *args)
 	else if (c == 's')
 		ft_string(args);
 	else if (c == 'd' || c == 'i')
-		ft_interger(args);
+		ft_integer(args);
 	else if (c == 'u')
 		ft_unsignedint(args);
 	else if (c == 'x' || c == 'X')
@@ -35,7 +35,7 @@ static void	getflag(const char c, t_shirt *args)
 
 static t_shirt	*initialise(void)
 {
-	t_shirt	args;
+	t_shirt	*args;
 
 	args = (t_shirt *)malloc(sizeof(t_shirt));
 	if (args == NULL)

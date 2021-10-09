@@ -6,7 +6,7 @@
 /*   By: jwander <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 14:29:33 by jwander           #+#    #+#             */
-/*   Updated: 2021/10/08 14:31:18 by jwander          ###   ########.fr       */
+/*   Updated: 2021/10/09 17:22:02 by jwander          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_char(t_shirt *args);
 void	ft_string(t_shirt *args);
 void	ft_integer(t_shirt *args);
 void	ft_unsignedint(t_shirt *args);
-void	ft_hex(t_shirt *args);
-void	ft_pointer(t_shirt args);
+void	ft_hex(t_shirt *args, char c);
+void	ft_pointer(t_shirt *args);
 
 #endif

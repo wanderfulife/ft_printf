@@ -6,7 +6,7 @@
 /*   By: jwander <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 13:31:09 by jwander           #+#    #+#             */
-/*   Updated: 2021/10/09 14:08:33 by jwander          ###   ########.fr       */
+/*   Updated: 2021/10/09 17:26:31 by jwander          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	ft_countnbr(unsigned int nb)
 	return (count);
 }
 
-static char	ft_unisgnedinttochar(unsigned int n)
+static char	*ft_unsignedinttochar(unsigned int n)
 {
 	char	*rtn;
 	int		len;
@@ -48,7 +48,7 @@ void	ft_integer(t_shirt *args)
 {
 	char	*str;
 
-	str = ft_itoa((int)va_args(args->arg, int));
+	str = ft_itoa((int)va_arg(args->arg, int));
 	ft_putstr_fd(str, 1);
 	args->counter += ft_strlen(str);
 	free(str);
@@ -58,7 +58,7 @@ void	ft_unsignedint(t_shirt *args)
 {
 	char	*str;
 
-	str = ft_unsignedinttochar((int)var_args(args->arg, unsigned int));
+	str = ft_unsignedinttochar((int)va_arg(args->arg, unsigned int));
 	ft_putstr_fd(str, 1);
 	args->counter += ft_strlen(str);
 	free(str);
